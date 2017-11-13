@@ -582,10 +582,10 @@ Item {
 
         expandFillWidth: false
         
-        property int expandDelay: 0
-        property int collapseDelay: 0
-        property int expandDuration: 200
-        property int collapseDuration: 200
+        expandDelay: 0
+        collapseDelay: 0
+        expandDuration: 200
+        collapseDuration: 200
 
         model: objects
         delegate: expandGridViewDelegate
