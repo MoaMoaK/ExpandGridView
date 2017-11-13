@@ -13,7 +13,7 @@ Those are the only mandatory properties but many other one can be used to fit
 one's preference.
 
 # Parameters
-**<PropertyName>** (<type> {*required*|<defaultValue>}): <Description>
+**\<PropertyName\>** (\<type\> {*required*|\<defaultValue\>}): \<Description\>
 
 ## Spacing management
 * **rowSpacing** (int 0): Space between two rows
