@@ -65,7 +65,7 @@ Column {
     Rectangle {
         id: expandPanel_container_id
         width: expandPanel_loader_id.item.width
-        height: expandPanel_loader_id.item.height
+        height: 0
 
         Loader {
             id: expandPanel_loader_id
@@ -84,7 +84,7 @@ Column {
                 from: ""; to: "expanded"
                 SequentialAnimation {
                     PropertyAnimation { duration: expandDelay }
-                    PropertyAnimation { properties: "sourceComponent";}
+                    PropertyAnimation { properties: "sourceComponent" }
                     PropertyAnimation { properties: "height,width"; duration: expandDuration }
                 }
             },
@@ -93,7 +93,7 @@ Column {
                 SequentialAnimation {
                     PropertyAnimation { duration: collapseDelay }
                     PropertyAnimation { properties: "height,width"; duration: collapseDuration }
-                    PropertyAnimation { properties: "sourceComponent";}
+                    PropertyAnimation { properties: "sourceComponent" }
                 }
             }
         ]

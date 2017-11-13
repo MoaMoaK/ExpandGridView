@@ -582,10 +582,10 @@ Item {
 
         expandFillWidth: false
         
-        property int expandDelay: 5000
+        property int expandDelay: 0
         property int collapseDelay: 0
-        property int expandDuration: 500
-        property int collapseDuration: 2000 
+        property int expandDuration: 200
+        property int collapseDuration: 200
 
         model: objects
         delegate: expandGridViewDelegate
@@ -597,7 +597,7 @@ Item {
     Component {
         id: expandGridViewDelegate
         Rectangle {
-            color: model ? model.mainColor : "#FF0000"
+            color: model ? model.mainColor : "#AA0000"
             width: 50
             height: 50
         }
