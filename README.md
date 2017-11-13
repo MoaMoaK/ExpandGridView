@@ -47,4 +47,4 @@ available, the expand delegate itself can have a different height)
 * **expandDelegate** (Component *required*): The delegate for the expanding zone
 
 # Example and testing
-An example with all parameters is available at [Example.qml]. It can be used to test how different parameters works and interact with each other
+An example with all parameters is available at [Example.qml](Example.qml). It can be used to test how different parameters works and interact with each other
