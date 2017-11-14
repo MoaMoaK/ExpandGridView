@@ -42,6 +42,7 @@ Flickable {
             return data.rowCount();
         if (data.columnCount !== undefined)
             return data.columnCount();
+        console.log('Impossible to get number of items from '+data)
         return 0;
     }
 

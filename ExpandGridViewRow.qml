@@ -36,6 +36,17 @@ Column {
         return expandItemIndex >= beginIndex && expandItemIndex <= endIndex;
     }
 
+    function get_item(i) {
+        if (model.get && model.get(i))
+            return model.get(i);
+        if (model.itemData)
+            return model.itemData(i);
+        if (model[i])
+            return model[i];
+        console.log('Impossible to get item data from '+model+' at index '+i);
+        return undefined;
+    }
+
     spacing : expandSpacing
     
     Row {
@@ -51,7 +62,7 @@ Column {
                 
                 Loader {
                     sourceComponent: root.delegate
-                    property var model: root.model.get(beginIndex + index)
+                    property var model: get_item(beginIndex + index)
                 }
 
                 MouseArea {
@@ -107,7 +118,7 @@ Column {
 
             Loader {
                 sourceComponent: root.expandDelegate
-                property var model: root.model.get(expandItemIndex)
+                property var model: get_item(expandItemIndex)
             }
         }
     }
