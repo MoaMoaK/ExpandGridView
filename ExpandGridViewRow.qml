@@ -67,7 +67,11 @@ Column {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: toggleExpand(beginIndex + index)
+                    propagateComposedEvents: true
+                    onClicked: {
+                        toggleExpand(beginIndex + index);
+                        mouse.accepted = false;
+                    }
                 }
             }
         }
