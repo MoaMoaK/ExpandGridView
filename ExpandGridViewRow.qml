@@ -45,7 +45,7 @@ Column {
         Repeater {
             model : endIndex - beginIndex + 1
             
-            delegate: Item {
+            Item {
                 height: cellHeight
                 width: cellWidth
                 
