@@ -29,8 +29,20 @@ Flickable {
     QtObject {
         id: priv
         property int itemsPerRow: Math.floor( width/(cellWidth+colSpacing) )
-        property int nbLines: Math.ceil( root.model.count / itemsPerRow )
+        property int nbLines: Math.ceil( nb_item(root.model) / itemsPerRow )
         property int expandItemIndex: -1
+    }
+
+    function nb_item(data) {
+        if (data.count !== undefined)
+            return data.count;
+        if (data.length !== undefined)
+            return data.length;
+        if (data.rowCount !== undefined)
+            return data.rowCount();
+        if (data.columnCount !== undefined)
+            return data.columnCount();
+        return 0;
     }
 
     function calc_begin(row_num) {
@@ -39,7 +51,7 @@ Flickable {
     function calc_end(row_num) {
         return Math.min(
             calc_begin(row_num+1) - 1,
-            model.count - 1
+            nb_item(model) - 1
         );
     }
     function calc_row_spacing() {
@@ -64,7 +76,7 @@ Flickable {
     }
 
     function toggleExpandAll( i ) {
-        if (i != priv.expandItemIndex && i >= 0 && i <= model.count )
+        if (i != priv.expandItemIndex && i >= 0 && i <= nb_item(model) )
             priv.expandItemIndex = i;
         else
             priv.expandItemIndex = -1;
