@@ -607,7 +607,7 @@ Item {
         id: expandGridViewExpandDelegate
         Rectangle {
             width: parent.parent.width
-            height: 256
+            height: parent.parent.height
             color: model ? model.secondColor : "#FF0000"
         }
     }

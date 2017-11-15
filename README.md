@@ -12,6 +12,12 @@ clicked (through `expandDelegate` varaible).
 Those are the only mandatory properties but many other one can be used to fit
 one's preference.
 
+In order to follow animation of the expand zone, the item must have bindings :
+```QML
+width: parent.parent.width
+height: parent.parent.height
+```
+
 # Parameters
 **\<PropertyName\>** (\<type\> {*required*|\<defaultValue\>}): \<Description\>
 
