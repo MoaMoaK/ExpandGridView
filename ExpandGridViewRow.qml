@@ -63,7 +63,7 @@ Column {
                 Loader {
                     sourceComponent: root.delegate
                     property var model: get_item(beginIndex + index)
-                    property var currentIndex: beginIndex + index
+                    property int currentIndex: beginIndex + index
                 }
 
                 MouseArea {
@@ -124,7 +124,7 @@ Column {
             Loader {
                 sourceComponent: root.expandDelegate
                 property var model: get_item(expandItemIndex)
-                property var currentIndex: expandItemIndex
+                property int currentIndex: expandItemIndex
             }
         }
     }
