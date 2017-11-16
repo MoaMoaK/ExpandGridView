@@ -38,6 +38,12 @@ the delegate itself can have a different height)
 delegate itself can have a different width)
 * **expandHeight** (int 0): Height of the expanded zone (define only the space
 available, the expand delegate itself can have a different height)
+* **expandCompact** (bool false): Should the height of the expanded zone be
+expandHeight or should it be compacted so it's the minimum between expandHeight
+and the height of the expandDelegate ?
+* **expandAdaptHeight** (bool false): Should the height of the expanded zone be
+always the height of the epxand Delegate ? (if true, properties expandHeight and
+expandCompact becom useless)
 
 ## Timing management
 * **expandDelay** (int 0): The delay before the expanding animation starts
