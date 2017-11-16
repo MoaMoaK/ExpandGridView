@@ -1,7 +1,7 @@
 # ExpandGridView
 A grid view written in QML that expand an area under an item when clicked
 
-# Usage
+## Usage
 This component is meant to be used the same way as the regular Qt's GridView.
 Meaning, you provide a `ListModel` or a `QVariant<Qlist>` or a C++ object
 that subclass `QAbstractItemModel` through the component's variable `model`
@@ -18,10 +18,10 @@ width: parent.parent.width
 height: parent.parent.height
 ```
 
-# Parameters
+## Parameters
 **\<PropertyName\>** (\<type\> {*required*|\<defaultValue\>}): \<Description\>
 
-## Spacing management
+### Spacing management
 * **rowSpacing** (int 0): Space between two rows
 * **colSpacing** (int 0): Space between two columns
 * **expandSpacing** (int 0): Space between a row and the expanded zone
@@ -31,7 +31,7 @@ height: parent.parent.height
 the root's width (true) or the row's width (false) (different when there is
 space left at end of row)
 
-## Componenent sizes management
+### Componenent sizes management
 * **cellHeight** (int 0): Height of a cell (define only the space available,
 the delegate itself can have a different height)
 * **cellWidth** (int 0): Width of a cell (define only the space available, the
@@ -45,7 +45,7 @@ and the height of the expandDelegate ?
 always the height of the epxand Delegate ? (if true, properties expandHeight and
 expandCompact becom useless)
 
-## Timing management
+### Timing management
 * **expandDelay** (int 0): The delay before the expanding animation starts
 (in ms)
 * **collapseDelay** (int 0): The delay before the collapsing animation starts
@@ -53,10 +53,10 @@ expandCompact becom useless)
 * **expandDuration** (int 0): The time the expanding animation lasts (in ms)
 * **collapseDuration** (int 0): The time the collapsing animation lasts (in ms)
 
-## Model and delegates
+### Model and delegates
 * **model** (var *required*): The model (data) to use
 * **delegate** (Component *required*): The delegate for the cells
 * **expandDelegate** (Component *required*): The delegate for the expanding zone
 
-# Example and testing
+## Example and testing
 An example with all parameters is available at [Example.qml](Example.qml). It can be used to test how different parameters works and interact with each other
