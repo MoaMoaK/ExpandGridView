@@ -575,12 +575,13 @@ Item {
         expandSpacing: 1
         fillHeight: false
         fillWidth: false
+        expandFillWidth: false
 
         cellHeight: 50
         cellWidth: 50
         expandHeight: 256
-
-        expandFillWidth: false
+        expandCompact: false
+        expandAdaptHeight: false
         
         expandDelay: 0
         collapseDelay: 0
